@@ -52,6 +52,46 @@ for (x = 0; x < json.length; x++) {
 
 // Create variable for HTML element to include
   let ridesData = document.querySelector(`.rides`)
+
+  if (car == `Noober Purple`) {
+  ridesData.insertAdjacentHTML(`beforeend`,
+  
+// Insert HTML
+
+  `<h1 class="inline-block mt-8 px-4 py-2 rounded-xl font-extrabold text-3xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+      <i class="fas fa-car-side"></i>
+      <span>${car}</span>
+    </h1>
+
+    <div class="border-4 p-4 my-4 text-left border-purple-500">
+      <div class="flex">
+        <div class="w-1/2">
+          <h2 class="text-2xl py-1">${riderFirstName} ${riderLastName}</h2>
+          <p class="font-bold text-gray-600">${riderPhone}</p>
+        </div>
+        <div class="w-1/2 text-right">
+          <span class="rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white p-2">
+            ${passengers} passengers
+          </span>
+        </div>
+      </div>
+      <div class="mt-4 flex">
+        <div class="w-1/2">
+          <div class="text-sm font-bold text-indigo-500">PICKUP</div>
+          <p>${riderAddress}</p>
+          <p>${riderCity}, ${riderState} ${riderZip}</p>
+        </div>
+        <div class="w-1/2">
+          <div class="text-sm font-bold text-indigo-500">DROPOFF</div>
+          <p>${riderDropAddress}</p>
+          <p>${riderDropCity}, ${riderDropState} ${riderDropZip}</p>
+        </div>
+      </div>
+    </div>`
+  
+  ) }
+  else {
+
   ridesData.insertAdjacentHTML(`beforeend`,
   
 // Insert HTML
@@ -87,12 +127,7 @@ for (x = 0; x < json.length; x++) {
       </div>
     </div>`
   
-  
-  
-  
-  
-  
-  )
+  ) }
   
 
 
